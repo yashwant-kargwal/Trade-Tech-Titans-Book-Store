@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Tech Titans | Book Store</title>
+    <link rel="shortcut icon" href="asset/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- <style>
+        :root{
+            --green: #06D800;
+            --black: #191919;
+            --yellow: #f5dc72;
+            --white: #fcfcfc;
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: poppins;
+        }
+        html{
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        body{
+            width: 100vw;
+            background-color: var(--black);
+            display: flex;
+            justify-content: center;
+        }
+        header{
+            width: 60%;
+            height: 100px;
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2024;
+        }
+        nav{
+            height: 70px;
+            width: 90%;
+            border: 2px solid var(--yellow);
+            backdrop-filter: blur(30px);
+            background-color: transparent;
+            border-radius: 12px;
+            color: var(--white);
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            z-index: 2024;
+            /* animation: nav 3s linear 0s infinite alternate-reverse; */
+        }
+        nav a{
+            color: var(--yellow);
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.5s;
+        }
+        nav a:hover{
+            text-shadow: 1px 1px 10px var(--green);
+            color: var(--white);
+        }
+        /* @keyframes nav{
+            0%{box-shadow: -10px -10px 10px var(--green);}
+            25%{box-shadow: 10px -10px  10px var(--green);}
+            50%{box-shadow: 10px 10px  10px var(--green);}
+            100%{box-shadow: -10px 10px  10px var(--green);}
+        } */
+        main{
+            height: 100%;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #Home{
+            min-height: 900px;
+            height: 100vh;
+            max-width: 900px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .lottie{
+            width: 600px;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .content {
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+	        position: relative;
+        }
+        .content h2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+	        color: var(--white);
+	        font-size: 4em;
+	        position: absolute;
+        }
+
+        .content h2:nth-child(1) {
+	        color: transparent;
+	        -webkit-text-stroke: 1px var(--green);
+        }       
+
+        .content h2:nth-child(2) {
+	        color: #34c52f;
+	        animation: animate 4s ease-in-out infinite;
+        }
+
+        @keyframes animate {
+	        0%,
+	        100% {
+		    clip-path: polygon(
+			    0% 45%,
+			    16% 44%,
+			    33% 50%,
+			    54% 60%,
+			    70% 61%,
+			    84% 59%,
+			    100% 52%,
+			    100% 100%,
+			    0% 100%
+		    );
+	        }
+
+	        50% {
+		        clip-path: polygon(
+			        0% 60%,
+			        15% 65%,
+			        34% 66%,
+			        51% 62%,
+			        67% 50%,
+			        84% 45%,
+			        100% 46%,
+			        100% 100%,
+			        0% 100%
+		        );
+	        }
+        }
+
+        #Products{
+            height: 100vh;
+            min-height: fit-content;
+            max-width: 1000px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 100px;
+        }
+        .Headings{
+            height: 13%;
+            font-size: 5em;
+            text-align: center;
+            color: var(--black);
+            -webkit-text-stroke: 2px var(--yellow);
+        }
+        .pro-Books-list{
+            height: 500px;
+            margin-top: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .img-book{
+            margin: 10px;
+            height: 400px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .img-book img{
+            height: 300px;
+            width: 300px;
+            background: var(--white);
+            border-radius: 25px;
+        }
+        .img-book p{
+            align-self: flex-start;
+            margin: 10px;
+            color: var(--white);
+        }
+        .img-book a{
+            height: fit-content;
+            width: fit-content;
+            text-decoration: none;
+            color: var(--green);
+            padding: 10px 15px;
+            border: 2px solid var(--green);
+            border-radius: 12px;
+        }
+    </style> -->
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#Home">Home</a>
+            <a href="#Products">Books</a>
+            <a href="#About-Us">About Us</a>
+            <a href="#Contact-us">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <div class="fix-img1">  
+            <img style="height: 700px;" src="asset/logo-removebg-preview.png" alt="tradetechlogo">        
+        </div>
+        <div class="fix-img2">  
+            <img style="height: 500px;" src="asset/Asset 2SunilDesigns.webp" alt="tradetechlogo">        
+        </div>
+
+
+        <section id="Home">
+            <div class="home-collbration">
+                <h1>Trade Tech Titans</h1> 
+                <img height="100px" src="asset/2764534.webp" alt="hand Shake image"> 
+                <h1>Skill With Earn</h1>
+            </div>
+            <div class="content">
+                <h2># Sikho Phir Trade Karo</h2>
+                <h2># Sikho Phir Trade Karo</h2>
+            </div>
+            <div class="lottie">
+                <lottie-player src="https://lottie.host/572a466a-6ca9-4a55-afd6-4eee4531f71a/ojswe0uQfJ.json"  
+                   background="transparent"  
+                   speed="1" 
+                   loop autoplay>
+                </lottie-player>
+            </div>
+        </section>
+
+        <hr>
+        <section id="experts">
+            <div class="exp-main">
+                <div class="exp-img">
+                    <img src="asset/Book Mockup2.png" alt="Main-book-image">
+                </div>
+                <div class="exp-img">
+                    <h2>The 25 Dark Secrets About Trading</h2>
+                    <p>Unveil the 25 Dark Secrets of Trading - a concise guide to mastering the art of high-stakes investing. This eBook offers exclusive insights, proven strategies, and untold tactics used by top traders to stay ahead in the market. Elevate your trading game with luxury wisdom, distilled into simple, actionable steps.</p>
+                    <ul class="custom-emogi">
+                        <li>Learn Form Experts</li>
+                        <li>Quality Content</li>
+                        <li>Insider Strategies</li>
+                        <li>Psychological Mastery</li>
+                        <li>Risk Management</li>
+                        <li>Sniper Entry</li>
+                        <li>Market Manipulations</li>
+                        <li>Leverage Secrets</li>
+                        <li>Long-Term Wealth</li>
+                        <li>Files includes ebook & PDF</li>
+                    </ul>
+                    <p style="font-size: 32px; font-weight: bold;">Original Price <span style="color: #f5dc72;"><del>₹9,999</del></span> — Now Just <span style="color: #06D800;">₹499</span> for a <span style="color: red;">Limited Time!</span></p>
+                    <span style="display: flex; justify-content: end;">
+                        <a class="butn" href="#Products">Buy Now</a>
+                    </span>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+
+        <section id="Products">
+            <div class="products-content">
+                <H2 class="Headings">Books</H2>
+                <img  width="150px" src="asset/books-animation-download-in-lo-unscreen.gif" alt="Books-animation">
+            </div>
+            <div class="pro-Books-list">
+                <div class="img-book">
+                    <img src="asset/Free_Hard_Cover_Book_Mockup__1_-removebg-preview.webp" alt="image-book">
+                    <p>Title</p>
+                    <p>Price : &#8377; 199/-</p>
+                    <a class="butn" href="">Buy Now</a>
+                </div>
+                <div class="img-book">
+                    <img src="asset/Free_Hard_Cover_Book_Mockup__1_-removebg-preview.webp" alt="image-book">
+                    <p>tittle</p>
+                    <p>Price : &#8377; 249/-</p>
+                    <a class="butn" href="">Buy Now</a>
+                </div>
+                <div class="img-book">
+                    <img src="asset/Free_Hard_Cover_Book_Mockup__1_-removebg-preview.webp" alt="image-book">
+                    <p>tittle</p>
+                    <p>Price : &#8377; 499/-</p>
+                    <a class="butn" href="">Buy Now</a>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="About-Us">
+
+        </section>
+
+
+        <section id="#Contact-us">
+            
+        </section>
+    </main>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+:root{
+    --green: #06D800;
+    --black: #191919;
+    --yellow: #f5dc72;
+    --white: #fcfcfc;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+body{
+    width: 100vw;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+}
+
+/*  */
+/* main header code start form here  */
+/*  */
+
+header{
+    width: 60%;
+    height: 100px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2024;
+}
+
+.fix-img1{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    left: -20%;
+    opacity: 0.1;
+    display: flex;
+    align-items: center;
+    z-index: -1;
+}
+
+.fix-img2{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    right: -15%;
+    opacity: 0.1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    z-index: -1;
+}
+
+nav{
+    height: 70px;
+    width: 90%;
+    border: 2px solid var(--yellow);
+    backdrop-filter: blur(30px);
+    background-color: transparent;
+    border-radius: 12px;
+    color: var(--white);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    z-index: 2024;
+}
+nav a{
+    color: var(--yellow);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+nav a:hover{
+    text-shadow: 1px 1px 10px var(--green);
+    color: var(--white);
+}
+
+/*  */
+/* Main section Start form here  */
+/*  */
+
+main{
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*  */
+/* Home Section From here  */
+/*  */
+
+#Home{
+    min-height: 900px;
+    height: 100vh;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.lottie{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.content h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 4em;
+    position: absolute;
+}
+
+.content h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--green);
+}       
+
+.content h2:nth-child(2) {
+    color: #34c52f;
+    animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%,
+    100% {
+    clip-path: polygon(
+        0% 45%,
+        16% 44%,
+        33% 50%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%
+    );
+    }
+
+    50% {
+        clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+        );
+    }
+}
+
+.home-collbration{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.home-collbration h1{
+    font-size: 2rem;
+    color: var(--white);
+}
+
+/*  */
+/* Expert section start from here  */
+/*  */
+
+#experts{
+    height: 100vh;
+    min-height: fit-content;
+    width: 100vw;
+    background: var(--black);
+    /* margin: 20px; */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exp-main{
+    height: 100%;
+    min-height: fit-content;
+    width: 80%;
+    min-width: 900px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.exp-img{
+    height: 80%;
+    min-height: 700px;
+    width: 45%;
+    min-width: 600px;
+}
+
+.exp-img img{
+    height: 90%;
+    filter:  drop-shadow(1px 1px 10px var(--yellow));
+    transition: all 2s;
+    animation: bookImg 2s 1s infinite linear alternate;
+}
+
+.exp-img img:hover{
+    transform: scale(1.1);
+}
+
+@keyframes bookImg {
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(20px);}
+    100%{transform: translateY(0px);}
+}
+
+.custom-emogi{
+    list-style: none;
+    padding-left: 0;
+    color: var(--white);
+    margin: 10px;
+}
+
+.custom-emogi li::before{
+    content: "✔️";
+    padding-right: 10px;
+}
+
+.exp-img h2{
+    font-size: 3rem;
+    color: var(--green);
+    text-shadow: 1px 1px 1px var(--white);
+}
+
+.exp-img p{
+    margin: 20px;
+    color: var(--white);
+    text-align: justify;
+}
+
+/*  */
+/* Products section start form here  */
+/*  */
+
+#Products{
+    height: 100vh;
+    min-height: fit-content;
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.products-content{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.Headings{
+    height: 13%;
+    width: fit-content;
+    font-size: 5em;
+    text-align: center;
+    color: var(--black);
+    -webkit-text-stroke: 5px var(--green);
+}
+.pro-Books-list{
+    height: 500px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.img-book{
+    margin: 10px;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.img-book img{
+    height: 300px;
+    width: 300px;
+    background: var(--white);
+    border-radius: 25px;
+}
+.img-book p{
+    align-self: flex-start;
+    margin: 10px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+/*  */
+/*  */
+/* custom section start here  */
+/*  */
+/*  */
+.butn{
+    height: fit-content;
+    width: fit-content;
+    text-decoration: none;
+    color: var(--yellow);
+    padding: 10px 15px;
+    font-weight: bold;
+    border: 2px solid var(--yellow);
+    border-radius: 12px;
+}
+
+hr{
+    border: 2px solid var(--green);
+    width: 100vw;
+}
+/*  */
+/*  */
+/* custom section end here  */
+/*  */
+/*  */
