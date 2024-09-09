@@ -197,7 +197,6 @@ main{
     min-height: fit-content;
     width: 100vw;
     background: var(--black);
-    /* margin: 20px; */
     padding: 20px;
     display: flex;
     align-items: center;
@@ -346,3 +345,102 @@ hr{
 /* custom section end here  */
 /*  */
 /*  */
+
+
+/*  */
+/* About us Start here */
+/*  */
+.About-Us{
+    height: 100vh;
+    min-height: fit-content;
+    width: 100vw;
+    background: var(--black);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.About-content{
+    height: 100%;
+    min-height: fit-content;
+    width: 80%;
+    min-width: 900px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.About-img{
+    height: 80%;
+    min-height: 700px;
+    width: 45%;
+    min-width: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.About-img img{
+    height: 90%;
+    filter:  drop-shadow(1px 1px 10px var(--white));
+    transition: all 2s;
+    animation: logo 4s 1s infinite linear alternate;
+}
+
+.About-img img:hover{
+    transform: scale(1.1);
+}
+
+@keyframes logo {
+    0%{transform: translateY(0px);
+        filter:  drop-shadow(1px 1px 0px var(--white));}
+    50%{transform: translateY(0px);
+        filter:  drop-shadow(1px 1px 10px var(--white));}
+    100%{transform: translateY(0px);
+        filter:  drop-shadow(1px 1px 0px var(--white));}
+}
+
+.About-con{
+    height: 80%;
+    min-height: fit-content;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.About-con h2{
+    font-size: 3.5rem;
+    color: var(--green);
+    text-shadow: 1px 1px 1px var(--white);
+}
+
+.About-con p{
+    margin: 20px;
+    color: var(--white);
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.coll{
+    width: 100%;
+    height: fit-content;
+    background: var(--black);
+    display: flex;
+    justify-content: center;
+}
+.coll img{
+    transform: scale(1.8) rotate(90deg);
+    height: 200px;
+    animation: collImg 4s 1s infinite linear alternate;
+}
+
+@keyframes collImg {
+    0%{
+        filter:  drop-shadow(1px 1px 0px var(--white));}
+    50%{
+        filter:  drop-shadow(1px 1px 10px var(--white));}
+    100%{transform: translateY(0px);
+        filter:  drop-shadow(1px 1px 0px var(--white));}
+}
