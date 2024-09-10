@@ -378,10 +378,12 @@ hr{
     min-width: 600px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .About-img img{
-    height: 90%;
+    height: 400px;
+    width: 400px;
     filter:  drop-shadow(1px 1px 10px var(--white));
     transition: all 2s;
     animation: logo 4s 1s infinite linear alternate;
@@ -423,24 +425,139 @@ hr{
     font-size: 1.2rem;
 }
 
-.coll{
+
+/*  */
+/* Founder Message start here  */
+/*  */
+
+#founder-message{
+    height: 50vh;
     width: 100%;
-    height: fit-content;
-    background: var(--black);
     display: flex;
+    align-items: center;
     justify-content: center;
 }
-.coll img{
-    transform: scale(1.8) rotate(90deg);
+
+#founder-message div{
     height: 200px;
-    animation: collImg 4s 1s infinite linear alternate;
+    min-height: fit-content;
+    width: 700px;
+    max-width: fit-content;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+q{
+    color: var(--green);
+    font-size: 2.2rem;
+    filter: drop-shadow(1px 1px 0px var(--white));
+    margin-bottom: 10px;
 }
 
-@keyframes collImg {
-    0%{
-        filter:  drop-shadow(1px 1px 0px var(--white));}
-    50%{
-        filter:  drop-shadow(1px 1px 10px var(--white));}
-    100%{transform: translateY(0px);
-        filter:  drop-shadow(1px 1px 0px var(--white));}
+.found-div p{
+    color: var(--white);
+    font-size: 16px;
+    text-align: center;
+}
+
+.found-div h2{
+    color: var(--yellow);
+    margin-top: 20px;
+}
+
+.linehr{
+    border: 1px solid var(--green);
+    width: 650px;
+    margin-top: 10px;
+}
+
+
+/*  */
+/* Contact Us Section start here */
+/*  */
+
+#Contact-us{
+    height: 80vh;
+    min-height: fit-content;
+    width: 100vw;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: fit-content;
+	width: 950px;
+	margin: 80px auto;
+	color: var(--white);
+	line-height: 1.5;
+}
+
+.text-center {
+	text-align: center;
+}
+.text-center h1{
+    text-align: center;
+    font-size: 4rem;
+    color: var(--yellow);
+}
+
+.contact-content {
+	display: flex;
+	margin-top: 40px;
+}
+
+.icon {
+	border-radius: 30px;
+	padding: 15px;
+	vertical-align: top;
+    height: 100px;
+}
+
+.contact-info {
+	display: inline-block;
+	padding: 4px 20px 0px 20px;
+}
+
+.contact-info-title{
+    color: var(--green);
+}
+
+.address-line {
+	margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.col-1 {
+	width: 530px;
+}
+
+.col-2 {
+    width: 600px;
+    height: 450px;
+	flex: 1 1 auto;
+	background-color: var(--white);
+    border-radius: 25px;
+}
+
+iframe{
+    border-radius: 25px;
+}
+
+.copyright{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+@media (max-width:1384px) {
+    html{
+        display: none;
+    }
+    
 }
