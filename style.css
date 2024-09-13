@@ -75,6 +75,10 @@ nav a:hover{
     color: var(--white);
 }
 
+.hand-img{
+    height: 100px;
+}
+
 /* Main section Start form here  */
 
 main{
@@ -170,7 +174,7 @@ main{
 
 /* Expert section start from here  */
 
-#experts{
+.experts{
     height: 100vh;
     min-height: 800px;
     width: 100vw;
@@ -187,6 +191,7 @@ main{
     width: 80%;
     min-width: 900px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -238,7 +243,7 @@ main{
 
 /* Products section start form here  */
 
-#Products{
+.Products{
     height: 100vh;
     min-height: 800px;
     max-width: 1000px;
@@ -251,6 +256,9 @@ main{
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+.products-content img{
+    width: 150px;
 }
 .Headings{
     height: 13%;
@@ -334,6 +342,7 @@ hr{
     width: 80%;
     min-width: 900px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -486,15 +495,19 @@ iframe{
     font-size: 14px;
 }
 
+/* Screen for laptops */
 @media (max-width:1384px) and (min-width:1024px) {
     nav{
         font-size: 1.5rem;
+    }
+    .fix-img{
+        width: 90vw;
     }
     .fix-img1{
         left: -25%;
     }
     .fix-img2{
-        right: -12%;
+        right: -20%;
     }
     .exp-img{
         min-width: 400px;
@@ -533,27 +546,82 @@ iframe{
     }
 }
 
+/* Screen for Tablets */
 @media (max-width:1024px) and (min-width:768px) {
     nav{
+        font-size: 1rem;
+    }
+    .home-collbration h1{
         font-size: 1.5rem;
     }
-    .fix-img1{
-        left: -25%;
+    .content h2 {
+        font-size: 3em;
     }
-    .fix-img2{
-        right: -12%;
+    .fix-img{
+        display: none;
+    }
+    .experts{
+        width: 768px;
+    }
+    .exp-main{
+        min-width: 768px;
     }
     .exp-img{
-        min-width: 400px;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .exp-img img{
+        width: 230px;
+        height: 430px;
+    }
+    .exp-img h2{
+        font-size: 2rem;
     }
     .price{
-        font-size: 28px;
+        font-size: 26px;
+    }
+    .Headings{
+        font-size: 3rem;
+        -webkit-text-stroke: 3px var(--green);
+    }
+    .products-content{
+        margin-top: 10px;
+    }
+    .products-content img{
+        width: 120px;
+    }
+    .pro-Books-list{
+        height: 100%;
+        margin-top: 10px;
+    }
+    .img-book{
+        margin: 10px;
+        height: 350px;
+        width: 300px;
+    }
+    .img-book img{
+        height: 280px;
+        width: 200px;
+        background: var(--white);
+        border-radius: 25px;
+    }
+    .img-book p{
+        align-self: center;
+        font-weight: bold;
+    }
+    .butn{
+        padding: 8px 10px;
+        font-size: 14px;
     }
     .About-Us{
         height: 700px;
     }
     .About-content{
-        height: 500px;
+        height: 400px;
+        min-width: 768px;
     }
     .About-img{
         width: 400px;
@@ -563,19 +631,189 @@ iframe{
         width: 300px;
         height: 300px;
     }
-    .exp-img h2{
-        font-size: 2.5rem;
+    .About-con{
+        width: 300px;
     }
     .About-con h2{
-        font-size: 2.8rem;
+        font-size: 2rem;
     }
     .com-para{
         font-size: 14px;
+        margin: 10px;
+    }
+    .col-1{
+        width: 350px;
+    }
+    .icon{
+        height: 75px;
+    }
+    .contact-info{
+        font-size: 14px;
     }
     .col-2{
-        width: 400px;
+        width: 350px;
     }
     iframe{
+        width: 350px;
+    }
+}
+
+/* Screen For Mobile */
+@media (max-width:768px) {
+    header{
+        width: 90%;
+    }
+    nav{
+        font-size: 1rem;
+        gap: 15px;
+    }
+    .home-collbration h1{
+        font-size: 1rem;
+    }
+    .hand-img{
+        height: 50px;
+    }
+    .content h2 {
+        font-size: 1.8em;
+    }
+    .lottie{
+        width: 350px;
+        height: 350px;
+    }
+    .fix-img{
+        display: none;
+    }
+    .experts{
+        width: 100%;
+        min-height: 1300px;
+    }
+    .exp-main{
+        min-width: 100%;
+        display: flex;
+    }
+    .main-book{
+        height: fit-content;
+    }
+    .exp-img{
+        min-height: 230px;
+        height: fit-content;
+        min-width: 300px;
+        width: 100%;
+        margin: 0px 20px;
+    }
+    .exp-img img{
+        width: 230px;
+        height: 430px;
+    }
+    .exp-img h2{
+        font-size: 2rem;
+    }
+    .price{
+        font-size: 26px;
+    }
+    .Headings{
+        font-size: 3rem;
+        -webkit-text-stroke: 3px var(--green);
+    }
+    .Products{
+        height: 100%;
+    }
+    .products-content{
+        margin-top: 10px;
+    }
+    .products-content img{
+        width: 120px;
+    }
+    .pro-Books-list{
+        height: 100%;
+        margin-top: 10px;
+    }
+    .img-book{
+        margin: 10px;
+        height: 350px;
+        width: 300px;
+    }
+    .img-book img{
+        height: 280px;
+        width: 200px;
+        background: var(--white);
+        border-radius: 25px;
+    }
+    .img-book p{
+        align-self: center;
+        font-weight: bold;
+    }
+    .butn{
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    .About-Us{
+        height: 1200px;
+        min-height: 100%;
+    }
+    .About-content{
+        height: 100%;
+        min-width: 300px;
+        flex-wrap: wrap;
+    }
+    .About-img{
         width: 400px;
+        min-height: 330px;
+        height: 330px;
+    }
+    .sweImg{
+        margin-bottom: 100px;
+    }
+    .About-img img{
+        width: 300px;
+        height: 300px;
+    }
+    .About-con{
+        width: 300px;
+        height: 500px;
+        min-height: 500px;
+    }
+    .sweAbout{
+        flex-wrap: wrap-reverse;
+        height: 1000px;
+    }
+    .About-con h2{
+        font-size: 2rem;
+    }
+    q{
+        font-size: 1.5rem;
+    }
+    .linehr{
+        width: 90%;
+    }
+    .found-div{
+        width: 100%;
+        height: 100%;
+    }
+    .com-para{
+        font-size: 14px;
+        margin: 10px;
+    }
+    .contact-content{
+        flex-wrap: wrap ;
+        justify-content: center;
+    }
+    .col-1{
+        width: 350px;
+    }
+    .icon{
+        height: 75px;
+    }
+    .contact-info{
+        font-size: 14px;
+    }
+    .col-2{
+        width: 90%;
+        height: 300px;
+        flex: none;
+    }
+    iframe{
+        width: 90%;
+        height: 300px;
     }
 }
